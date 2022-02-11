@@ -155,7 +155,7 @@ def posts_update(post_id):
     db.session.commit()
     flash(f"Post '{post.title}' edited")
 
-    return redirect(f"/user/{post.user_id}")
+    return redirect(f"/users/{post.user_id}")
 
 @app.route('/posts/<int:post_id>/delete', methods=["POST"])
 def posts_delete(post_id):

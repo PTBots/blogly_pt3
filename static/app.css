@@ -9,3 +9,7 @@ ul {
 	font-size: 1.25em;
 	font-family: 'Supermercado One', cursive;
 }
+
+.title {
+	text-decoration: underline;
+}

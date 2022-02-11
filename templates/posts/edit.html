@@ -4,7 +4,7 @@
 
 {% block body %}
 
-<h1 class="spacing">Edit Post</h1>
+<h1 class="title spacing">Edit Post</h1>
 
 <form method="POST" action="/posts/{{ post.id }}/edit">
 
@@ -44,10 +44,10 @@
   <div class="form-group row spacing">
     <div class="">
       <a href="/users/{{ post.user_id }}" class="btn btn-outline-info">
-        Cancel
+        cancel
       </a>
       <button type="submit" class="btn btn-success">
-        Edit
+        update
       </button>
     </div>
   </div>

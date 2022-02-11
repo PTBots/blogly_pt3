@@ -2,9 +2,9 @@
 
 {% block title %}{{ tag.name }}{% endblock %}
 
-{% block content %}
+{% block body %}
 
-<h1 class="spacing">{{ tag.name }}</h1>
+<h1 class="title spacing">{{ tag.name }}</h1>
 
 <ul class="spacing">
   {% for post in tag.posts %}
@@ -15,11 +15,11 @@
 <form class="spacing">
   <button formmethod="GET"
           formaction="/tags/{{ tag.id }}/edit"
-          class="btn btn-primary">Edit
+          class="btn btn-primary">edit
   </button>
   <button formmethod="POST"
           formaction="/tags/{{ tag.id }}/delete"
-          class="btn btn-danger">Delete
+          class="btn btn-danger">delete
   </button>
 
 </form>
