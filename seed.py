@@ -1,7 +1,7 @@
 """Seed file to make sample data for db"""
 
 from os import name
-from models import User, db, Tag
+from models import User, db, Tag, Post
 from app import app
 
 #Create all tables
@@ -27,3 +27,10 @@ important = Tag(name= "important")
 db.session.add_all([funny, sad, happy, unbelievable, legendary, important])
 
 db.session.commit()
+
+wiwi = Post(title ="wiwi", content="wiwiwoowoo", user_id = '1')
+lklajs = Post(title ="lklajs", content="lkasjdf", user_id = '2')
+
+db.session.add_all([wiwi, lklajs])
+db.session.commit()
+
