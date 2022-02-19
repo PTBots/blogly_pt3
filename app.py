@@ -104,7 +104,7 @@ def posts_new_form(user_id):
     """form for the user's new post"""
 
     user = User.query.get_or_404(user_id)
-    return render_template('posts/new.html', user=user)
+    return render_template('posts/new.html', user=user, tags=Tag.query.all())
 
 @app.route('/users/<int:user_id>/posts/new', methods=["POST"])
 def posts_new(user_id):
